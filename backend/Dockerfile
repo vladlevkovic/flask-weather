@@ -5,9 +5,13 @@ WORKDIR /app
 COPY requirements.txt /app/requirements.txt
 
 RUN pip install --no-cache-dir -r /app/requirements.txt
+
+COPY . /app/
+
 EXPOSE 5000
 EXPOSE 80
 
 ENV FLASK_APP=app.main
 
-CMD ["flask", "run", "--host=0.0.0"]
+
+CMD ["flask", "run", "--host=0.0.0.0"]

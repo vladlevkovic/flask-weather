@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
-from service import extract_weather_data
+from .service import extract_weather_data
 import requests
 import os
 
